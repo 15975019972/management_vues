@@ -5,6 +5,10 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 const Login=()=>import('components/login.vue')
 const Home=()=>import('components/home.vue')
+const WelCome=()=>import('components/WelCome.vue')
+const Users=()=>import('components/users/Users.vue')
+const Roles=()=>import('components/users/Roles.vue')
+const Rights=()=>import('components/users/Rights.vue')
 const routes = [
   {
     path:'',
@@ -16,14 +20,34 @@ const routes = [
    },
    {
      path:'/home',
-     component:Home
+     component:Home,
+     children:[
+       {
+         path:'',
+         redirect: '/welcome'
+       },
+       {
+         path:"/welcome",
+         component:WelCome
+       },
+       {
+         path:"/users",
+         component:Users
+       },{
+         path:'/roles',
+         component:Roles
+       },{
+         path:'/rights',
+         component:Rights
+       }
+     ]
    }
 ]
 
 const router = new VueRouter({
+  routes,
   mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+  base: process.env.BASE_URL
 })
 // 挂载裸导航守卫
 router.beforeEach((to,from,next)=>{
