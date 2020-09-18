@@ -74,7 +74,7 @@ export default {
            const {data:res}=await this.$http.get('menus')
            if(res.meta.status!==200) return this.$message.error(res.meta.meg)
            this.menusList=res.data
-           console.log(this.menusList);
+        //    console.log(this.menusList);
            
         },
         // 点击按钮, 切换菜单的折叠与展开

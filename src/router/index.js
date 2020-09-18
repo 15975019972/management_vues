@@ -7,8 +7,10 @@ const Login=()=>import('components/login.vue')
 const Home=()=>import('components/home.vue')
 const WelCome=()=>import('components/WelCome.vue')
 const Users=()=>import('components/users/Users.vue')
-const Roles=()=>import('components/users/Roles.vue')
-const Rights=()=>import('components/users/Rights.vue')
+const Roles=()=>import('components/power/Roles.vue')
+const Rights=()=>import('components/power/Rights.vue')
+
+
 const routes = [
   {
     path:'',
