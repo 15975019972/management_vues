@@ -10,6 +10,7 @@ const Users=()=>import('components/users/Users.vue')
 const Roles=()=>import('components/power/Roles.vue')
 const Rights=()=>import('components/power/Rights.vue')
 const Cate=()=>import('components/goods/Cate.vue')
+const Params=()=>import('components/goods/Parmas.vue')
 
 
 const routes = [
@@ -45,6 +46,9 @@ const routes = [
        },{
          path:'/categories',
          component:Cate
+       },{
+         path:'/params',
+         component:Params
        }
      ]
    }
