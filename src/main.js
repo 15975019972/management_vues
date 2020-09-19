@@ -3,6 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// 导入第三方表格
+import ZkTable from 'vue-table-with-tree-grid'
+Vue.component('tree-table', ZkTable)
+
 // 导入element-ui
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
@@ -51,7 +55,8 @@ Vue.config.productionTip = false
     Tag,
     Tree,
     Select,
-    Option
+    Option,
+    Cascader
   } from 'element-ui'
 
 
@@ -82,6 +87,7 @@ Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Cascader)
 Vue.prototype.$message=Message
 Vue.prototype.$confirm=MessageBox.confirm
 

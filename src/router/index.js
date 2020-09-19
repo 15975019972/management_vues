@@ -9,6 +9,7 @@ const WelCome=()=>import('components/WelCome.vue')
 const Users=()=>import('components/users/Users.vue')
 const Roles=()=>import('components/power/Roles.vue')
 const Rights=()=>import('components/power/Rights.vue')
+const Cate=()=>import('components/goods/Cate.vue')
 
 
 const routes = [
@@ -41,6 +42,9 @@ const routes = [
        },{
          path:'/rights',
          component:Rights
+       },{
+         path:'/categories',
+         component:Cate
        }
      ]
    }
