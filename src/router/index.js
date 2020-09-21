@@ -14,7 +14,7 @@ const Params=()=>import('components/goods/Parmas.vue')
 const GoodsList=()=>import('components/goods/List.vue')
 const GoodsAddPage=()=>import('components/goods/Add.vue')
 const Order=()=>import('components/order/Order.vue')
-
+const Report=()=>import('components/report/Report.vue')
 
 const routes = [
   {
@@ -61,6 +61,9 @@ const routes = [
        },{
          path:'/orders',
          component:Order 
+       },{
+         path:'/reports',
+         component:Report
        }
      ]
    },
